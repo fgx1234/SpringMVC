@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd ">
+
+       <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<!--              需要这个bean才能获取到请求数据-->
+              <property name="prefix" value="WEB-INF/page/"></property>
+              <property name="suffix" value=".jsp"></property>
+       </bean>
+       <bean id="/hello" class="com.fgx3077.controller.HelloController">
+
+       </bean>
+</beans>
